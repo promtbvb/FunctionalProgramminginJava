@@ -5,6 +5,11 @@ import java.util.function.Supplier;
 
 public class _Supplier {
 
+    static Supplier<List<String>> getDBConnectionUrlsSupplier = ()
+            -> List.of(
+            "jdbc://localhost:5432/users",
+            "jdbc://localhost:5432/customer");
+
     public static void main(String[] args) {
         System.out.println(getDBConnectionUrl());
         System.out.println(getDBConnectionUrlsSupplier.get());
@@ -13,10 +18,5 @@ public class _Supplier {
     static String getDBConnectionUrl() {
         return "jdbc://localhost:5432/users";
     }
-
-    static Supplier<List<String>> getDBConnectionUrlsSupplier = ()
-            -> List.of(
-            "jdbc://localhost:5432/users",
-            "jdbc://localhost:5432/customer");
 
 }

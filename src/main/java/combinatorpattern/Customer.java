@@ -8,6 +8,13 @@ public class Customer {
     private final String phoneNumber;
     private final LocalDate dob;
 
+    public Customer(String name, String email, String phoneNumber, LocalDate dob) {
+        this.name = name;
+        this.email = email;
+        this.phoneNumber = phoneNumber;
+        this.dob = dob;
+    }
+
     public String getName() {
         return name;
     }
@@ -22,12 +29,5 @@ public class Customer {
 
     public LocalDate getDob() {
         return dob;
-    }
-
-    public Customer(String name, String email, String phoneNumber, LocalDate dob) {
-        this.name = name;
-        this.email = email;
-        this.phoneNumber = phoneNumber;
-        this.dob = dob;
     }
 }

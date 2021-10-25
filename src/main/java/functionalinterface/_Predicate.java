@@ -4,6 +4,11 @@ import java.util.function.Predicate;
 
 public class _Predicate {
 
+    static Predicate<String> isPhoneNumberValidPredicate = phoneNumber ->
+            phoneNumber.startsWith("07") && phoneNumber.length() == 11;
+    static Predicate<String> containsNumber3 = phoneNumber ->
+            phoneNumber.contains("3");
+
     public static void main(String[] args) {
 
         System.out.println("Without predicate");
@@ -31,10 +36,4 @@ public class _Predicate {
     static boolean isPhoneNumberValid(String phoneNumber) {
         return phoneNumber.startsWith("07") && phoneNumber.length() == 11;
     }
-
-    static Predicate<String> isPhoneNumberValidPredicate = phoneNumber ->
-            phoneNumber.startsWith("07") && phoneNumber.length() == 11;
-
-    static Predicate<String> containsNumber3 = phoneNumber ->
-            phoneNumber.contains("3");
 }

@@ -42,6 +42,10 @@ public class Main {
         females2.forEach(System.out::println);
     }
 
+    enum Gender {
+        MALE, FEMALE
+    }
+
     static class Person {
         private final String name;
         private final Gender gender;
@@ -58,9 +62,5 @@ public class Main {
                     ", gender=" + gender +
                     '}';
         }
-    }
-
-    enum Gender {
-        MALE, FEMALE
     }
 }

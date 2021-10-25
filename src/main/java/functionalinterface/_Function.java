@@ -4,6 +4,14 @@ import java.util.function.BiFunction;
 import java.util.function.Function;
 
 public class _Function {
+    static Function<Integer, Integer> incrementByOneFun =
+            number -> number + 1;
+    static Function<Integer, Integer> multiplyBy10Fun =
+            number -> number * 10;
+    static BiFunction<Integer, Integer, Integer> incrementByOneAndMultiplyBiFun =
+            (numberToIncrementByOne, numberToMultiplyBy)
+                    -> (numberToIncrementByOne + 1) * numberToMultiplyBy;
+
     public static void main(String[] args) {
         //Function takes 1 arg and produces 1 result
         int increment = incrementByOne(1);
@@ -23,15 +31,6 @@ public class _Function {
         System.out.println(incrementByOneAndMultiply(4, 100));
         System.out.println(incrementByOneAndMultiplyBiFun.apply(4, 100));
     }
-
-    static Function<Integer, Integer> incrementByOneFun =
-            number -> number + 1;
-    static Function<Integer, Integer> multiplyBy10Fun =
-            number -> number * 10;
-
-    static BiFunction<Integer, Integer, Integer> incrementByOneAndMultiplyBiFun =
-            (numberToIncrementByOne, numberToMultiplyBy)
-                    -> (numberToIncrementByOne + 1) * numberToMultiplyBy;
 
     static int incrementByOne(int number) {
         return number + 1;

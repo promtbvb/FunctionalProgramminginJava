@@ -29,6 +29,10 @@ public class _Stream {
     }
 
 
+    enum Gender {
+        MALE, FEMALE, PREFER_NOT_TO_SAY,
+    }
+
     static class Person {
         private final String name;
         private final Gender gender;
@@ -44,9 +48,5 @@ public class _Stream {
                     ", gender=" + gender +
                     '}';
         }
-    }
-
-    enum Gender {
-        MALE, FEMALE, PREFER_NOT_TO_SAY,
     }
 }
